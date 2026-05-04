@@ -3,375 +3,399 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sexualité et Responsabilité Partagée</title>
+<title>DESE — Sexualité et Responsabilité Partagée</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
 
-  :root {
-    --navy: #1e3a5f;
-    --teal: #1a7a6e;
-    --gold: #c8922a;
-    --light: #f4f1eb;
-    --white: #ffffff;
-    --grey: #555e6b;
-    --light-teal: #e8f4f2;
-    --light-navy: #eef2f7;
-  }
+:root {
+  --rose:        #E8006F;
+  --rose-light:  #fce8f3;
+  --teal:        #009B8D;
+  --teal2:       #00B5A5;
+  --teal-light:  #e0f5f3;
+  --white:       #ffffff;
+  --off:         #f7fffe;
+  --dark:        #0d2b28;
+  --grey:        #4a5568;
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  /* Ombres */
+  --shadow-card:   0 4px 24px rgba(0,155,141,0.10), 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-deep:   0 8px 40px rgba(13,43,40,0.13), 0 2px 8px rgba(0,0,0,0.07);
+  --shadow-hover:  0 12px 48px rgba(0,155,141,0.18), 0 2px 10px rgba(0,0,0,0.08);
+}
 
-  body {
-    font-family: 'Source Sans 3', sans-serif;
-    background: var(--light);
-    color: #2c3240;
-    line-height: 1.75;
-  }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-  /* COVER */
-  .cover {
-    background: var(--navy);
-    color: white;
-    padding: 60px 48px 48px;
-    position: relative;
-    overflow: hidden;
-  }
-  .cover::before {
-    content: '';
-    position: absolute;
-    top: -60px; right: -60px;
-    width: 300px; height: 300px;
-    border-radius: 50%;
-    background: rgba(200,146,42,0.15);
-  }
-  .cover::after {
-    content: '';
-    position: absolute;
-    bottom: -40px; left: 30%;
-    width: 200px; height: 200px;
-    border-radius: 50%;
-    background: rgba(26,122,110,0.2);
-  }
-  .cover-tag {
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  .cover h1 {
-    font-family: 'Lora', serif;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-bottom: 14px;
-    color: white;
-  }
-  .cover .subtitle {
-    font-size: 16px;
-    color: rgba(255,255,255,0.7);
-    font-style: italic;
-    margin-bottom: 32px;
-    font-family: 'Lora', serif;
-  }
-  .cover-schools {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 8px;
-  }
-  .cover-schools span {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 20px;
-    padding: 4px 14px;
-    font-size: 12px;
-    color: rgba(255,255,255,0.8);
-  }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--off);
+  color: var(--dark);
+  line-height: 1.75;
+}
 
-  /* MAIN */
-  .content {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 48px 32px 80px;
-  }
+/* ── COVER ── */
+.cover {
+  background: var(--dark);
+  padding: 60px 48px 52px;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: rgba(232,0,111,0.18);
+  pointer-events: none;
+}
+.cover::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: 30%;
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  background: rgba(0,155,141,0.18);
+  pointer-events: none;
+}
+.cover-tag {
+  font-size: 11px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--teal2);
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+.cover h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 58px;
+  letter-spacing: 2px;
+  line-height: 1.05;
+  color: white;
+  margin-bottom: 14px;
+}
+.cover .subtitle {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 36px;
+}
+.cover-schools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cover-schools span {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 20px;
+  padding: 5px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.75);
+}
 
-  /* SECTION */
-  .section {
-    margin-bottom: 52px;
-  }
+/* ── CONTENT ── */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 56px 36px 90px;
+}
 
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 24px;
-    padding-bottom: 14px;
-    border-bottom: 2px solid var(--light-teal);
-  }
-  .section-number {
-    background: var(--navy);
-    color: white;
-    font-family: 'Lora', serif;
-    font-size: 13px;
-    font-weight: 700;
-    width: 34px; height: 34px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .section-title {
-    font-family: 'Lora', serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--navy);
-  }
+/* ── SECTION ── */
+.section { margin-bottom: 64px; }
 
-  /* SUBSECTION */
-  h3 {
-    font-family: 'Lora', serif;
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--teal);
-    margin: 28px 0 10px;
-  }
+.section-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.section-number {
+  background: var(--rose);
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 18px;
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.section-title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--teal);
+}
+.section-divider {
+  height: 3px;
+  background: linear-gradient(to right, var(--rose), var(--teal), transparent);
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
 
-  p {
-    font-size: 15px;
-    color: var(--grey);
-    margin-bottom: 12px;
-  }
+p { font-size: 15px; color: var(--grey); margin-bottom: 12px; }
+ul, ol { padding-left: 22px; margin-bottom: 14px; }
+li { font-size: 15px; color: var(--grey); margin-bottom: 8px; padding-left: 4px; }
+ul li::marker { color: var(--rose); }
+ol li::marker { color: var(--teal); font-weight: 800; }
 
-  /* LISTS */
-  ul, ol {
-    margin: 10px 0 14px 0;
-    padding-left: 24px;
-  }
-  li {
-    font-size: 15px;
-    color: var(--grey);
-    margin-bottom: 8px;
-    padding-left: 4px;
-  }
-  ul li::marker { color: var(--teal); }
-  ol li::marker { color: var(--navy); font-weight: 600; }
+h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 19px;
+  letter-spacing: 1.5px;
+  color: var(--rose);
+  margin: 28px 0 10px;
+}
 
-  /* QUOTE */
-  .quote {
-    border-left: 4px solid var(--gold);
-    margin: 20px 0;
-    padding: 14px 20px;
-    background: rgba(200,146,42,0.06);
-    border-radius: 0 8px 8px 0;
-    font-family: 'Lora', serif;
-    font-style: italic;
-    font-size: 15px;
-    color: var(--navy);
-    font-weight: 600;
-  }
+/* ── QUOTE ── */
+.quote {
+  background: var(--dark);
+  color: white;
+  border-radius: 12px;
+  padding: 18px 24px 18px 40px;
+  margin: 20px 0;
+  font-style: italic;
+  font-size: 14.5px;
+  font-weight: 600;
+  position: relative;
+  box-shadow: var(--shadow-deep);
+}
+.quote::before {
+  content: '❝';
+  position: absolute;
+  left: 14px; top: 14px;
+  color: var(--rose);
+  font-size: 20px;
+  font-style: normal;
+}
 
-  /* CARDS */
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin: 16px 0;
-  }
-  .card {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    border: 1px solid #e0e5ee;
-  }
-  .card.good { border-top: 3px solid var(--teal); }
-  .card.bad  { border-top: 3px solid #c0392b; }
-  .card-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .card.good .card-label { color: var(--teal); }
-  .card.bad  .card-label { color: #c0392b; }
-  .card h4 {
-    font-family: 'Lora', serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 10px;
-  }
-  .card li { font-size: 14px; }
+/* ── DEF GRID ── */
+.defs {
+  display: grid;
+  gap: 16px;
+  margin: 18px 0;
+}
+.def-box {
+  background: white;
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: var(--shadow-card);
+}
+.def-box h4 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 19px;
+  letter-spacing: 1px;
+  color: var(--teal);
+  margin-bottom: 8px;
+}
+.def-box p { margin: 0; font-size: 14.5px; }
 
-  /* CONSEQUENCE BOXES */
-  .consequences {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin: 16px 0;
-  }
-  .consequence-box {
-    background: white;
-    border-radius: 10px;
-    padding: 18px;
-    border: 1px solid #e0e5ee;
-  }
-  .consequence-box .icon {
-    font-size: 22px;
-    margin-bottom: 8px;
-  }
-  .consequence-box h4 {
-    font-family: 'Lora', serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 8px;
-  }
-  .consequence-box p {
-    font-size: 13px;
-    margin: 0;
-  }
+/* ── CONSENT ITEMS ── */
+.consent-items { margin: 16px 0; display: flex; flex-direction: column; gap: 12px; }
+.consent-item {
+  background: white;
+  border-radius: 12px;
+  padding: 18px 22px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  box-shadow: var(--shadow-card);
+}
+.consent-num {
+  background: var(--rose);
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  width: 34px; height: 34px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.consent-item p { margin: 0; font-size: 14.5px; padding-top: 2px; }
 
-  /* STEPS */
-  .steps { margin: 16px 0; }
-  .step {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 20px;
-    align-items: flex-start;
-  }
-  .step-num {
-    background: var(--teal);
-    color: white;
-    font-weight: 700;
-    font-size: 13px;
-    width: 30px; height: 30px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .step-body h4 {
-    font-family: 'Lora', serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 6px;
-  }
-  .step-body p { margin: 0; font-size: 14px; }
+/* ── CONSEQUENCES ── */
+.consequences {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 18px 0;
+}
+.consequence-box {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s;
+}
+.consequence-box:hover { box-shadow: var(--shadow-hover); }
+.consequence-box .icon { font-size: 26px; margin-bottom: 10px; }
+.consequence-box h4 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.consequence-box p { font-size: 13.5px; margin: 0; }
 
-  /* KEY MESSAGES */
-  .key-messages {
-    background: var(--navy);
-    border-radius: 14px;
-    padding: 32px;
-    color: white;
-  }
-  .key-messages h3 { color: var(--gold); margin-top: 0; }
-  .key-message-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-  .key-message-item .check {
-    color: var(--gold);
-    font-size: 18px;
-    margin-top: 1px;
-    flex-shrink: 0;
-  }
-  .key-message-item p {
-    color: rgba(255,255,255,0.88);
-    margin: 0;
-    font-size: 15px;
-  }
-  .final-quote {
-    margin-top: 24px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    font-family: 'Lora', serif;
-    font-style: italic;
-    font-size: 15px;
-    color: rgba(255,255,255,0.7);
-    text-align: center;
-  }
+/* ── COMPARE CARDS ── */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 18px 0;
+}
+.card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s;
+}
+.card:hover { box-shadow: var(--shadow-hover); }
+.card-head {
+  padding: 14px 20px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  color: white;
+}
+.card.good .card-head { background: var(--teal); }
+.card.bad  .card-head { background: #b91c1c; }
+.card-body { padding: 18px 22px; }
+.card-body h4 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+.card-body ul { padding-left: 18px; margin: 0; }
+.card-body li { font-size: 14px; margin-bottom: 8px; }
+.card.good .card-body li::marker { color: var(--teal); }
+.card.bad  .card-body li::marker { color: #b91c1c; }
 
-  /* DEFINITION GRID */
-  .defs {
-    display: grid;
-    gap: 14px;
-    margin: 16px 0;
-  }
-  .def-box {
-    background: var(--light-navy);
-    border-radius: 10px;
-    padding: 18px 20px;
-    border-left: 4px solid var(--navy);
-  }
-  .def-box h4 {
-    font-family: 'Lora', serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 6px;
-  }
-  .def-box p { margin: 0; font-size: 14px; }
+/* ── QUESTIONS ── */
+.questions {
+  background: var(--teal-light);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-top: 16px;
+  box-shadow: var(--shadow-card);
+}
+.questions h4 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+.questions ol { padding-left: 20px; margin: 0; }
+.questions li { font-size: 14px; color: var(--grey); margin-bottom: 7px; }
+.questions li::marker { color: var(--teal); }
 
-  /* CONSENTEMENT NUMBERED */
-  .consent-items { margin: 14px 0; }
-  .consent-item {
-    display: flex;
-    gap: 14px;
-    margin-bottom: 14px;
-    align-items: flex-start;
-  }
-  .consent-num {
-    background: var(--teal);
-    color: white;
-    font-weight: 700;
-    font-size: 13px;
-    width: 28px; height: 28px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .consent-item p { margin: 0; padding-top: 2px; font-size: 14.5px; }
+/* ── STEPS ── */
+.steps { display: flex; flex-direction: column; gap: 14px; margin: 18px 0; }
+.step {
+  background: white;
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  box-shadow: var(--shadow-card);
+}
+.step-num {
+  background: var(--teal);
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 22px;
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.step-body h4 {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+.step-body p { font-size: 14px; margin: 0; }
 
-  /* QUESTIONS */
-  .questions {
-    background: var(--light-teal);
-    border-radius: 10px;
-    padding: 18px 20px;
-    margin-top: 16px;
-  }
-  .questions h4 {
-    font-family: 'Lora', serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--teal);
-    margin-bottom: 10px;
-  }
-  .questions ol { margin: 0; padding-left: 20px; }
-  .questions li { font-size: 14px; color: var(--grey); margin-bottom: 6px; }
+/* ── KEY MESSAGES ── */
+.key-messages {
+  background: var(--dark);
+  border-radius: 18px;
+  padding: 38px 40px;
+  box-shadow: var(--shadow-deep);
+}
+.km-title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: var(--rose);
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.km-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.km-dot {
+  width: 10px; height: 10px;
+  background: var(--rose);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+.km-item p { color: rgba(255,255,255,0.9); font-size: 15px; margin: 0; font-weight: 700; }
+.km-final {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-style: italic;
+  font-size: 14.5px;
+  color: rgba(255,255,255,0.55);
+  text-align: center;
+  line-height: 1.7;
+}
 
-  @media (max-width: 600px) {
-    .cover { padding: 40px 24px 36px; }
-    .cover h1 { font-size: 26px; }
-    .content { padding: 32px 20px 60px; }
-    .cards, .consequences { grid-template-columns: 1fr; }
-  }
+/* ── FOOTER ── */
+.footer {
+  background: var(--teal);
+  text-align: center;
+  padding: 20px 32px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .cover { padding: 40px 24px 40px; }
+  .cover h1 { font-size: 42px; }
+  .content { padding: 36px 20px 64px; }
+  .cards, .consequences { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
 
+<!-- COVER -->
 <div class="cover">
-  <div class="cover-tag">Rotaract Club &nbsp;•&nbsp; DESE</div>
-  <h1>Sexualité et<br>Responsabilité Partagée</h1>
+  <div class="cover-tag">Rotaract Club &nbsp;•&nbsp; DESE 2.0</div>
+  <h1>Sexualité et<br>Responsabilité<br>Partagée</h1>
   <div class="subtitle">Rôles et obligations des jeunes dans une relation saine</div>
   <div class="cover-schools">
-    <span>Semi-lycée Anacaona</span>
-    <span>Lycée National Henry Christophe</span>
-    <span>Lycée Gabriel Bien-Aimé</span>
+    <span>Écoles</span>
+    <span>Églises</span>
+    <span>Organisations</span>
   </div>
 </div>
 
@@ -381,8 +405,9 @@
   <div class="section">
     <div class="section-header">
       <div class="section-number">1</div>
-      <div class="section-title">Objectif de la Session</div>
+      <div class="section-title">Objectif de la Formation</div>
     </div>
+    <div class="section-divider"></div>
     <p>Amener les jeunes à comprendre que toute relation saine repose sur un partage équitable des responsabilités. Cette session aborde trois piliers fondamentaux :</p>
     <ul>
       <li><strong>Consentement</strong> — un accord libre, éclairé, toujours révocable.</li>
@@ -397,6 +422,7 @@
       <div class="section-number">2</div>
       <div class="section-title">Définitions Clés</div>
     </div>
+    <div class="section-divider"></div>
     <p>Ces définitions servent de base pour mieux comprendre et agir dans une relation saine.</p>
     <div class="defs">
       <div class="def-box">
@@ -420,6 +446,7 @@
       <div class="section-number">3</div>
       <div class="section-title">Le Consentement</div>
     </div>
+    <div class="section-divider"></div>
     <p>Le consentement est le fondement de toute relation respectueuse. Il doit être :</p>
     <div class="consent-items">
       <div class="consent-item">
@@ -439,7 +466,7 @@
         <p><strong>Non conditionné</strong> — un consentement donné sous pression, sous l'effet de l'alcool ou par peur n'est pas un vrai consentement.</p>
       </div>
     </div>
-    <div class="quote">« Le consentement n'est pas une formalité — c'est le fondement de toute relation respectueuse »</div>
+    <div class="quote">Le consentement n'est pas une formalité — c'est le fondement de toute relation respectueuse.</div>
   </div>
 
   <!-- 4. COMMUNICATION & PROTECTION -->
@@ -448,6 +475,7 @@
       <div class="section-number">4</div>
       <div class="section-title">Communication et Protection</div>
     </div>
+    <div class="section-divider"></div>
 
     <h3>🗣 La Communication</h3>
     <p>La communication est essentielle pour maintenir une relation équilibrée et respectueuse. Elle implique :</p>
@@ -456,7 +484,7 @@
       <li>Savoir écouter l'autre sans minimiser ses émotions ou ses préoccupations.</li>
       <li>Comprendre que sans communication, une relation accumule des blessures qui peuvent devenir irréparables.</li>
     </ul>
-    <div class="quote">« Dire ce qu'on pense protège les deux »</div>
+    <div class="quote">Dire ce qu'on pense protège les deux.</div>
 
     <h3>🛡 La Protection</h3>
     <p>La protection contre les grossesses non planifiées et les IST est une responsabilité partagée :</p>
@@ -465,7 +493,7 @@
       <li>Les deux partenaires doivent s'informer, se préparer et agir ensemble.</li>
       <li>Rejeter cette responsabilité sur l'autre constitue un manque de respect et peut avoir des conséquences graves.</li>
     </ul>
-    <div class="quote">« Se protéger, c'est aussi protéger l'autre »</div>
+    <div class="quote">Se protéger, c'est aussi protéger l'autre.</div>
   </div>
 
   <!-- 5. CONSÉQUENCES -->
@@ -474,6 +502,7 @@
       <div class="section-number">5</div>
       <div class="section-title">Quand la Responsabilité fait Défaut</div>
     </div>
+    <div class="section-divider"></div>
     <p>L'irresponsabilité dans une relation entraîne des conséquences réelles, durables, et souvent irréversibles pour les deux partenaires :</p>
     <div class="consequences">
       <div class="consequence-box">
@@ -497,7 +526,7 @@
         <p>Sans consentement ni communication, la relation devient le terrain de la manipulation et de la violence. Ces situations laissent des séquelles profondes.</p>
       </div>
     </div>
-    <div class="quote">« L'irresponsabilité dans une relation n'est jamais sans conséquence — pour l'un comme pour l'autre »</div>
+    <div class="quote">L'irresponsabilité dans une relation n'est jamais sans conséquence — pour l'un comme pour l'autre.</div>
   </div>
 
   <!-- 6. ÉTUDE DE CAS -->
@@ -506,31 +535,36 @@
       <div class="section-number">6</div>
       <div class="section-title">Étude de Cas — Analyse Comparative</div>
     </div>
+    <div class="section-divider"></div>
     <p>Ces deux situations permettent d'identifier concrètement ce qui caractérise une relation saine et une relation malsaine.</p>
     <div class="cards">
       <div class="card good">
-        <div class="card-label">✅ Situation A</div>
-        <h4>Relation Saine</h4>
-        <ul>
-          <li>Communiquent ouvertement sur leurs besoins, envies et limites.</li>
-          <li>Se respectent mutuellement, sans pression ni jugement.</li>
-          <li>Prennent ensemble les décisions concernant leur protection.</li>
-          <li>Savent dire non sans crainte de représailles.</li>
-        </ul>
+        <div class="card-head">✅ Situation A</div>
+        <div class="card-body">
+          <h4>Relation Saine</h4>
+          <ul>
+            <li>Communiquent ouvertement sur leurs besoins, envies et limites.</li>
+            <li>Se respectent mutuellement, sans pression ni jugement.</li>
+            <li>Prennent ensemble les décisions concernant leur protection.</li>
+            <li>Savent dire non sans crainte de représailles.</li>
+          </ul>
+        </div>
       </div>
       <div class="card bad">
-        <div class="card-label">⚠️ Situation B</div>
-        <h4>Relation Malsaine</h4>
-        <ul>
-          <li>Fait pression sur l'autre pour obtenir ce qu'il veut.</li>
-          <li>Minimise les inquiétudes et émotions de l'autre.</li>
-          <li>Refuse de s'impliquer dans les décisions de protection.</li>
-          <li>Utilise la culpabilisation ou le chantage affectif.</li>
-        </ul>
+        <div class="card-head">⚠️ Situation B</div>
+        <div class="card-body">
+          <h4>Relation Malsaine</h4>
+          <ul>
+            <li>Fait pression sur l'autre pour obtenir ce qu'il veut.</li>
+            <li>Minimise les inquiétudes et émotions de l'autre.</li>
+            <li>Refuse de s'impliquer dans les décisions de protection.</li>
+            <li>Utilise la culpabilisation ou le chantage affectif.</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="questions">
-      <h4>Questions de réflexion</h4>
+      <h4>Questions de Réflexion</h4>
       <ol>
         <li>Quelles sont les différences fondamentales entre ces deux situations ?</li>
         <li>Qu'aurait-on pu faire autrement dans la Situation B ?</li>
@@ -545,6 +579,7 @@
       <div class="section-number">7</div>
       <div class="section-title">Parler à un Adulte de Confiance</div>
     </div>
+    <div class="section-divider"></div>
     <p>Aborder des sujets sensibles avec un adulte peut être difficile, mais cela peut tout changer. Voici trois stratégies concrètes :</p>
     <div class="steps">
       <div class="step">
@@ -569,7 +604,7 @@
         </div>
       </div>
     </div>
-    <div class="quote">« Tu n'as pas à traverser ça seul(e). Parler à temps peut tout changer. »</div>
+    <div class="quote">Tu n'as pas à traverser ça seul(e). Parler à temps peut tout changer.</div>
   </div>
 
   <!-- 8. MESSAGES CLÉS -->
@@ -578,33 +613,40 @@
       <div class="section-number">8</div>
       <div class="section-title">Messages Clés à Retenir</div>
     </div>
+    <div class="section-divider"></div>
     <div class="key-messages">
-      <div class="key-message-item">
-        <span class="check">✦</span>
-        <p><strong>Le consentement est la base de toute relation.</strong></p>
+      <div class="km-title">À RETENIR</div>
+      <div class="km-item">
+        <div class="km-dot"></div>
+        <p>Le consentement est la base de toute relation.</p>
       </div>
-      <div class="key-message-item">
-        <span class="check">✦</span>
-        <p><strong>La protection est une responsabilité partagée.</strong></p>
+      <div class="km-item">
+        <div class="km-dot"></div>
+        <p>La protection est une responsabilité partagée.</p>
       </div>
-      <div class="key-message-item">
-        <span class="check">✦</span>
-        <p><strong>Communiquer protège les deux personnes.</strong></p>
+      <div class="km-item">
+        <div class="km-dot"></div>
+        <p>Communiquer protège les deux personnes.</p>
       </div>
-      <div class="key-message-item">
-        <span class="check">✦</span>
-        <p><strong>L'irresponsabilité a des conséquences réelles et durables.</strong></p>
+      <div class="km-item">
+        <div class="km-dot"></div>
+        <p>L'irresponsabilité a des conséquences réelles et durables.</p>
       </div>
-      <div class="key-message-item">
-        <span class="check">✦</span>
-        <p><strong>Il y a toujours un adulte de confiance à qui on peut parler.</strong></p>
+      <div class="km-item">
+        <div class="km-dot"></div>
+        <p>Il y a toujours un adulte de confiance à qui on peut parler.</p>
       </div>
-      <div class="final-quote">
-        « Une relation saine ne se construit pas par hasard — elle se construit chaque jour sur le respect, la communication et la responsabilité de chacun. »
+      <div class="km-final">
+        « Une relation saine ne se construit pas par hasard — elle se construit chaque jour<br>sur le respect, la communication et la responsabilité de chacun. »
       </div>
     </div>
   </div>
 
 </div>
+
+<div class="footer">
+  DESE &nbsp;•&nbsp; Rotaract Club &nbsp;•&nbsp; Disc. Éducation Sexuelle & Émotionnelle
+</div>
+
 </body>
 </html>
