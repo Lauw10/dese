@@ -33,67 +33,158 @@ body {
   line-height: 1.75;
 }
 
-/* ── COVER ── */
-.cover {
-  background: var(--dark);
-  padding: 60px 48px 52px;
+/* ── HEADER ── */
+.header {
+  background: white;
+  padding: 24px 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 4px solid var(--teal);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.header-left .brand {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 22px;
+  color: var(--rose);
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+.header-left .sub {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.dese-logo {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 48px;
+  color: var(--rose);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.dese-logo sup {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--rose);
+  vertical-align: super;
+}
+.dese-tagline {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--teal);
   position: relative;
   overflow: hidden;
+  padding: 48px 40px 40px;
+  text-align: center;
 }
-.cover::before {
+.hero::before {
   content: '';
   position: absolute;
   top: -80px; right: -80px;
-  width: 320px; height: 320px;
+  width: 280px; height: 280px;
   border-radius: 50%;
   background: rgba(232,0,111,0.18);
-  pointer-events: none;
 }
-.cover::after {
+.hero::after {
   content: '';
   position: absolute;
-  bottom: -60px; left: 30%;
-  width: 240px; height: 240px;
+  bottom: -60px; left: -60px;
+  width: 220px; height: 220px;
   border-radius: 50%;
-  background: rgba(0,155,141,0.18);
-  pointer-events: none;
+  background: rgba(255,255,255,0.07);
 }
-.cover-tag {
-  font-size: 11px;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: var(--teal2);
-  font-weight: 800;
-  margin-bottom: 22px;
-}
-.cover h1 {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 58px;
-  letter-spacing: 2px;
-  line-height: 1.05;
+.hero-tag {
+  display: inline-block;
+  background: var(--rose);
   color: white;
-  margin-bottom: 14px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 13px;
+  letter-spacing: 3px;
+  padding: 4px 18px;
+  border-radius: 20px;
+  margin-bottom: 16px;
 }
-.cover .subtitle {
+.hero h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 48px;
+  color: white;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+.hero .hero-sub {
   font-size: 15px;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.85);
   font-style: italic;
   font-weight: 600;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
-.cover-schools {
+.hero-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  justify-content: center;
 }
-.cover-schools span {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
+.hero-pills span {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
   border-radius: 20px;
   padding: 5px 16px;
   font-size: 12px;
   font-weight: 700;
-  color: rgba(255,255,255,0.75);
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* ── EVENT BAR ── */
+.event-bar {
+  background: var(--rose);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 12px 40px;
+  flex-wrap: wrap;
+}
+.event-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+}
+.event-item .icon { font-size: 18px; }
+.event-item .badge {
+  background: white;
+  color: var(--rose);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  padding: 2px 10px;
+  border-radius: 6px;
+  letter-spacing: 1px;
 }
 
 /* ── CONTENT ── */
@@ -378,24 +469,55 @@ h3 {
 }
 
 @media (max-width: 600px) {
-  .cover { padding: 40px 24px 40px; }
-  .cover h1 { font-size: 42px; }
-  .content { padding: 36px 20px 64px; }
+  .header { padding: 20px; }
+  .dese-logo { font-size: 36px; }
+  .hero { padding: 36px 20px 28px; }
+  .hero h1 { font-size: 34px; }
+  .content { padding: 32px 20px 60px; }
   .cards, .consequences { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 
-<!-- COVER -->
-<div class="cover">
-  <div class="cover-tag">Rotaract Club &nbsp;•&nbsp; DESE 2.0</div>
-  <h1>Sexualité et<br>Responsabilité<br>Partagée</h1>
-  <div class="subtitle">Rôles et obligations des jeunes dans une relation saine</div>
-  <div class="cover-schools">
-    <span>Écoles</span>
-    <span>Églises</span>
-    <span>Organisations</span>
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <div class="brand">Rotaract</div>
+    <div class="sub">Club du Campus Henry Christophe</div>
+    <div class="sub" style="color:#888">Université d'État d'Haïti à Limonade</div>
+  </div>
+  <div class="header-right">
+    <div class="dese-logo">DESE<sup>2.0</sup></div>
+    <div class="dese-tagline">De l'Éducation Sexuelle à l'Émancipation</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">CONFÉRENCE</div>
+  <h1>Sexualité &amp;<br>Responsabilité Partagée</h1>
+  <div class="hero-sub">Rôles et obligations des jeunes dans une relation saine</div>
+  <div class="hero-pills">
+    <span>🏫 Écoles</span>
+    <span>⛪ Églises</span>
+    <span>🤝 Organisations</span>
+  </div>
+</div>
+
+<!-- EVENT BAR -->
+<div class="event-bar">
+  <div class="event-item">
+    <span class="icon">🕙</span>
+    <span class="badge">10 HRS</span>
+  </div>
+  <div class="event-item">
+    <span class="icon">📅</span>
+    <span class="badge">6 MAI</span>
+  </div>
+  <div class="event-item">
+    <span class="icon">📍</span>
+    <span>Auditorium CHCL</span>
   </div>
 </div>
 
@@ -405,7 +527,7 @@ h3 {
   <div class="section">
     <div class="section-header">
       <div class="section-number">1</div>
-      <div class="section-title">Objectif de la Formation</div>
+      <div class="section-title">Objectif de la Session</div>
     </div>
     <div class="section-divider"></div>
     <p>Amener les jeunes à comprendre que toute relation saine repose sur un partage équitable des responsabilités. Cette session aborde trois piliers fondamentaux :</p>
